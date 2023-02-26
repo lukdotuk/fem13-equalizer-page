@@ -1,0 +1,434 @@
+/* -------------------- */
+/* custom properties    */
+/* -------------------- */
+
+:root {
+  /* colors */
+  --clr-500: #191826;
+  --clr-400: #65e2db;
+  --clr-300: #fa7352;
+  --clr-200: #ffba66;
+  --clr-100: #fcf9f8;
+
+  /* font sizes */
+  --fs-900: 5.5rem;
+  --fs-800: 4.0625rem;
+  --fs-700: 4rem;
+  --fs-600: 2.5rem;
+  --fs-500: 2rem;
+  --fs-400: 1.25rem;
+  --fs-300: 1.125rem;
+  --fs-200: 1rem;
+
+  /* font weights */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* font family */
+  --ff-sans: 'IBM Plex Sans', sans-serif;
+
+  /* border radius */
+  --br: .75rem
+}
+
+/* -------------------- */
+/* Reset                */
+/* -------------------- */
+
+/* box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* margin and padding reset */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* set up the body */
+body {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-regular);
+}
+
+/* set up font weight */
+h1,
+h2,
+span {
+  font-weight: var(--fw-bold);
+}
+
+/* set up the images */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* set up the buttons */
+button {
+  display: block;
+  font-family: inherit;
+  margin-inline: auto;
+  border: none;
+  border-radius: var(--br);
+  cursor: pointer;
+}
+
+/* -------------------- */
+/* mobile components    */
+/* -------------------- */
+
+/* ----- backgrounds ----- */
+.container {
+  background-image: url(./assets/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 17.5875rem 30rem;
+  background-position: top -6.5625rem left 10rem;
+}
+.main-content {
+  background-image: url(./assets/bg-pattern-2.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 17.5rem;
+  background-color: var(--clr-500);
+  border-radius: var(--br);
+}
+.premium {
+  background-color: var(--clr-300);
+  border-radius: var(--br);
+}
+.ios {
+  background-color: var(--clr-500);
+}
+.android {
+  background-color: var(--clr-100);
+}
+
+/* ----- margins and padding ----- */
+.logo-top {
+  margin-left: 1.5rem;
+  padding-top: 2.5rem;
+}
+.intro {
+  margin-inline: 1.5rem;
+  padding-top: 4rem;
+}
+.intro-head {
+  margin-bottom: 1.25rem;
+}
+.intro-text {
+  margin-bottom: 10.375rem;
+}
+.main-content {
+  margin-bottom: 24.375rem;
+}
+.premium {
+  padding-top: 3rem;
+}
+.premium-header,
+.premium-text {
+  padding-inline: 2.25rem;
+}
+.premium-header {
+  margin-bottom: .75rem;
+}
+.premium-text {
+  margin-bottom: 2.25rem;
+}
+.sale {
+  margin-left: 2.625rem;
+  margin-bottom: 2rem;
+}
+.ios,
+.android {
+  margin-left: 2.625rem;
+  margin-right: 2.3125rem;
+  padding: 1.125rem 0;
+}
+.ios {
+  margin-bottom: 1rem;
+}
+.android {
+  margin-bottom: 3rem;
+}
+.foot {
+  margin-inline: 1.5rem;
+  padding-bottom: 5rem;
+}
+.logo-bottom {
+  margin-bottom: 2rem;
+}
+.foot-text {
+  margin-bottom: 4rem;
+}
+
+/* ----- typography ----- */
+.intro-head {
+  font-size: var(--fs-600);
+  line-height: 3rem;
+}
+.premium {
+  color: var(--clr-100)
+}
+.intro-text {
+  font-size: var(--fs-200);
+  line-height: 1.625rem;
+}
+.premium-header {
+  font-size: var(--fs-500);
+}
+.premium-text {
+  font-size: var(--fs-300);
+  line-height: 1.75rem;
+}
+.price {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+  line-height: 3.25rem;
+}
+.period {
+  font-size: var(--fs-400);
+}
+.ios {
+  color: var(--clr-100);
+}
+.ios,
+.android {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+}
+.foot-text {
+  font-size: var(--fs-200);
+  line-height: 1.625rem;
+}
+
+/* ----- other ----- */
+.main-content {
+  position: relative;
+  height: 37.5rem;
+}
+.app-screen {
+  position: absolute;
+  height: 26.875rem;
+  transform: translate( 5.1875rem, -6.125rem);
+}
+.premium {
+  width: 23.4375rem;
+  position: absolute;
+  transform: translate(0, 23.75rem);
+}
+.sale {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.price, .period {
+  display: inline;
+}
+.ios,
+.android {
+  width: 18.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+.icons {
+  display: flex;
+  gap: 1.25rem;
+}
+
+@media (hover: hover) {
+  .icons > a > img:hover {
+    filter: invert(57%) sepia(15%) saturate(4391%) hue-rotate(328deg) brightness(104%) contrast(96%);
+  }
+  .ios:hover {
+    background-color: var(--clr-400);
+  }
+  .android:hover {
+    background-color: var(--clr-200);
+  }
+}
+
+/* -------------------- */
+/* tablet components    */
+/* -------------------- */
+
+@media (min-width: 48rem) {
+
+  /* ----- backgrounds ----- */
+  .container {
+    background-image: url(./assets/bg-main-tablet.png), url(./assets/bg-pattern-1.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 61.4375rem 50.5rem, 16.5rem 25rem;
+    background-position: top -7rem right 2.5rem, top -2rem right -2.25rem;
+  }
+  .main-content {
+    background-position: top -2rem right 11.6875rem;
+  }  
+  /* ----- margins and padding ----- */
+  .logo-top {
+    margin-left: 2.5rem;
+    padding-top: 3.875rem;
+  }
+  .intro {
+    margin-left: 2.5rem;
+    margin-right: 10.625rem;
+    padding-top: 5.9375rem;
+  }
+  .intro-head {
+    margin-bottom: 1.75rem;
+  }
+  .intro-text {
+    padding-right: 3rem;
+    margin-bottom: 15.625rem;
+  }
+  .main-content {
+    margin-inline: 2.5rem;
+    margin-bottom: 11.4375rem;
+  }
+  .premium-header,
+  .premium-text {
+    padding-inline: 3rem;
+  }
+  .ios,
+  .android {
+    margin-left: 3.375rem;
+  }
+  .foot {
+    margin-inline: 2.25rem;
+    padding-bottom: 5.3125rem;
+  }
+  .foot-text {
+    margin-bottom: 0rem;
+  }
+  /* ----- typography ----- */
+  .intro-head {
+    font-size: var(--fs-700);
+    line-height: 4rem;
+  }
+  .intro-text {
+    font-size: var(--fs-300);
+    line-height: 1.75rem;
+  }
+  /* ----- other ----- */
+  .app-screen {
+    position: absolute;
+    height: 34.75rem;
+    transform: translate(4rem, -8.625rem);
+  }
+  .premium {
+    width: 25rem;
+    position: absolute;
+    transform: translate(14.9375rem, 9.375rem);
+  }
+  .foot {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .logo-bottom {
+    grid-area: 1/1/2/3;
+  }
+  .icons {
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+/* -------------------- */
+/* desktop components   */
+/* -------------------- */
+
+@media (min-width: 90rem) {
+
+  /* ----- backgrounds ----- */
+  .container {
+    background-image: url(./assets/bg-main-desktop.png), url(./assets/bg-pattern-1.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100.8125rem 109.875rem, 19.5rem 29.25rem;
+    background-position: top -7rem right 1.6875rem, top -2.5rem right;
+  }
+  .main-content {
+    background-size: 19.5rem 29.25rem;
+    background-position: top -2.5rem left 21rem;
+  }  
+  /* ----- margins and padding ----- */
+  .logo-top {
+    margin-left: 10.375rem;
+    padding-top: 3.875rem;
+  }
+  .intro {
+    margin-left: 10.3125rem;
+    margin-right: 16.25rem;
+    padding-top: 7.9375rem;
+  }
+  .intro-head {
+    margin-bottom: 2.5rem;
+  }
+  .intro-text {
+    padding-right: 10rem;
+    margin-bottom: 20.0625rem;
+  }
+  .main-content {
+    margin-inline: 10.3125rem;
+    margin-bottom: 12.625rem;
+  }
+  .premium {
+    padding-top: 3.625rem;
+  }
+  .premium-header,
+  .premium-text {
+    padding-left: 3.375rem;
+    padding-right: 3.6875rem;
+  }
+  .foot {
+    margin-inline: 10.3125rem;
+    padding-bottom: 5.6825rem;
+  }
+  .foot-text {
+    margin-bottom: 0rem;
+  }
+  /* ----- typography ----- */
+  .intro-head {
+    font-size: var(--fs-900);
+    line-height: 5.5rem;
+  }
+  .intro-text {
+    font-size: var(--fs-400);
+    line-height: 2.125rem;
+  }
+  .premium-header {
+    font-size: var(--fs-600);
+  }
+  .premium-text {
+    font-size: var(--fs-400);
+    line-height: 1.75rem;
+  }
+  /* ----- other ----- */
+  .app-screen {
+    position: absolute;
+    height: 40.125rem;
+    transform: translate(6.375rem, -13.3125rem);
+  }
+  .premium {
+    width: 27.875rem;
+    position: absolute;
+    transform: translate(35.5625rem, 5.625rem);
+  }
+  .ios,
+  .android {
+    width: 20.8125rem;
+  }
+  .foot {
+    display: grid;
+    grid-template-columns: 285px 366px auto;
+  }
+  .logo-bottom {
+    grid-area: 1/1/2/2;
+  }
+}
